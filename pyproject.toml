@@ -1,0 +1,13 @@
+[project]
+name = "mwasis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "jupyterlab>=4.4.1",
+    "matplotlib-inline>=0.1.7",
+    "seaborn>=0.13.2",
+    "tensorflow-probability[tf]>=0.25.0",
+]
