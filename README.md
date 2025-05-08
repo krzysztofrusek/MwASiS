@@ -10,3 +10,4 @@
 ## ćwiczenia
 
 1. [Obliczenia techniczne](ćwiczenia/Obliczenia_techniczne_Ćwiczenia.ipynb)
+1. [Modle probabilistyczne](ćwiczenia/Modele_probabilistyczne_Ćwiczenia.ipynb)
