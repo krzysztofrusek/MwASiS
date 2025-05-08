@@ -58,3 +58,6 @@ warnings.filterwarnings("ignore")
 
 def display_df(df:pd.DataFrame):
     display(Markdown(df.to_markdown()))
+
+import scipy
+import scipy.stats as stats

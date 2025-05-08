@@ -9,7 +9,12 @@ out/Modele_probabilistyczne.md: wykład/Modele_probabilistyczne.ipynb
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
 	sed -i '' 's/\[svg/\[/g' $@
 
-wyklady: out/Modele_probabilistyczne.pdf
+
+out/Parametryzacja_modeli.md: wykład/Parametryzacja_modeli.ipynb
+	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
+	sed -i '' 's/\[svg/\[/g' $@
+
+wyklady: out/Modele_probabilistyczne.pdf out/Parametryzacja_modeli.pdf
 
 stud:
 	mkdir -p stud
