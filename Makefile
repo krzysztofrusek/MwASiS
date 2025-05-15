@@ -44,7 +44,10 @@ cw: stud/Obliczenia_techniczne_CÌwiczenia.tar.gz stud/Modele_probabilistyczne_Ä
 clean:
 	rm -rf out stud
 
-.PHONY: gdown laby
+.PHONY: gdown laby autotest
+
+autotest:
+	cd autotest && python -m autotest && cd -
 
 
 
