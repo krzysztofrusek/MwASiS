@@ -21,6 +21,13 @@ out/Bayes.md: wykład/Bayes.ipynb
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
 	sed -i '' 's/\[svg/\[/g' $@
 
+
+# out/Bayes.pdf:wykład/Bayes_tex/Bayes.tex
+# 	rsync -a wykład/Bayes_tex/ out/
+# 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' \
+# 		-pdf -output-directory="out" $<
+# 		#-aux-directory=out/aux \
+
 wyklady: out/Modele_probabilistyczne.pdf out/Parametryzacja_modeli.pdf
 
 stud:
