@@ -4,6 +4,9 @@ CONF=nbconf.py
 %.pdf: %.md
 	pandoc $< -o $@ -t beamer --slide-level 2 --resource-path=out
 
+%.tex: %.md
+	pandoc $< -o $@ -t beamer --slide-level 2 --resource-path=out --citeproc --standalone
+
 
 out/Modele_probabilistyczne.md: wykład/Modele_probabilistyczne.ipynb
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
@@ -11,6 +14,10 @@ out/Modele_probabilistyczne.md: wykład/Modele_probabilistyczne.ipynb
 
 
 out/Parametryzacja_modeli.md: wykład/Parametryzacja_modeli.ipynb
+	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
+	sed -i '' 's/\[svg/\[/g' $@
+
+out/Bayes.md: wykład/Bayes.ipynb
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
 	sed -i '' 's/\[svg/\[/g' $@
 
