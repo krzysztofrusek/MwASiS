@@ -6,7 +6,7 @@
 
 1. [Modele probabilistyczne](wykład/Modele_probabilistyczne.ipynb)
 1. [Parametryzacja modeli](wykład/Parametryzacja_modeli.ipynb)
-1. [Bayes](TODO)
+1. [Bayes](wykład/Bayes.ipynb)
 
 ## ćwiczenia
 
