@@ -1,0 +1,10 @@
+[project]
+name="autotets"
+version="0.0.2"
+dependencies=[
+    "tabulate",
+    "pandas",
+    "Jinja2",
+    "jax",
+    "jaxlib"
+]
