@@ -20,7 +20,23 @@ mpl.rcParams['figure.facecolor']= '#FAFAFA'
 import os
 import matplotlib_inline
 
+
+import logging
+
+# Suppress absl warnings
+try:
+    absl_logger = logging.getLogger('absl')
+    absl_logger.setLevel(logging.ERROR) # Or logging.CRITICAL
+except AttributeError: # In case absl is not found or used directly
+    pass
+
+# You can also try a more general approach if the specific logger name is unknown
+# logging.basicConfig(level=logging.ERROR) # This might be too broad
+
+
 os.environ["JAX_ENABLE_X64"] = "True"
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0: DEBUG, 1: INFO, 2: WARNING, 3: ERROR, 4: FATAL
+# os.environ['XLA_FLAGS'] = '--tf_xla_logging_level=0'
 
 from IPython.display import  Image,Markdown,Latex, display
 #set_matplotlib_formats('svg', 'pdf')
