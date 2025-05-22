@@ -21,6 +21,9 @@ out/Bayes.md: wykład/Bayes.ipynb
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
 	sed -i '' 's/\[svg/\[/g' $@
 
+out/Obliczenia_Bayesowskie.md: wykład/Obliczenia_Bayesowskie.ipynb
+	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
+	sed -i '' 's/\[svg/\[/g' $@
 
 # out/Bayes.pdf:wykład/Bayes_tex/Bayes.tex
 # 	rsync -a wykład/Bayes_tex/ out/
@@ -28,7 +31,7 @@ out/Bayes.md: wykład/Bayes.ipynb
 # 		-pdf -output-directory="out" $<
 # 		#-aux-directory=out/aux \
 
-wyklady: out/Modele_probabilistyczne.pdf out/Parametryzacja_modeli.pdf
+wyklady: out/Modele_probabilistyczne.pdf out/Parametryzacja_modeli.pdf out/Obliczenia_Bayesowskie.pdf 
 
 stud:
 	mkdir -p stud
@@ -53,7 +56,7 @@ stud/%.tar: stud/%.ipynb
 %.tar.gz: %.tar
 	gzip $^
 
-cw: stud/Obliczenia_techniczne_Ćwiczenia.tar.gz stud/Modele_probabilistyczne_Ćwiczenia.ipynb stud/Parametryzacja_modeli_Ćwiczenia.ipynb
+cw: stud/Obliczenia_techniczne_Ćwiczenia.tar.gz stud/Modele_probabilistyczne_Ćwiczenia.ipynb stud/Parametryzacja_modeli_Ćwiczenia.ipynb stud/Bayes_cw.ipynb
 
 clean:
 	rm -rf out stud

@@ -495,6 +495,15 @@ wheels = [
 ]
 
 [[package]]
+name = "graphviz"
+version = "0.20.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/83/5a40d19b8347f017e417710907f824915fba411a9befd092e52746b63e9f/graphviz-0.20.3.zip", hash = "sha256:09d6bc81e6a9fa392e7ba52135a9d49f1ed62526f96499325930e87ca1b5925d", size = 256455 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/be/d59db2d1d52697c6adc9eacaf50e8965b6345cc143f671e1ed068818d5cf/graphviz-0.20.3-py3-none-any.whl", hash = "sha256:81f848f2904515d8cd359cc611faba817598d2feaac4027b266aa3eda7b3dde5", size = 47126 },
+]
+
+[[package]]
 name = "grpcio"
 version = "1.71.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1181,6 +1190,7 @@ name = "mwasis"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "graphviz" },
     { name = "ipykernel" },
     { name = "jax" },
     { name = "jaxlib" },
@@ -1189,6 +1199,7 @@ dependencies = [
     { name = "optax" },
     { name = "scipy" },
     { name = "seaborn" },
+    { name = "silence-tensorflow" },
     { name = "sympy" },
     { name = "tensorflow" },
     { name = "tensorflow-probability", extra = ["tf"] },
@@ -1196,6 +1207,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "graphviz", specifier = ">=0.20.3" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "jax", specifier = ">=0.6.0" },
     { name = "jaxlib", specifier = ">=0.6.0" },
@@ -1204,6 +1216,7 @@ requires-dist = [
     { name = "optax", specifier = ">=0.2.4" },
     { name = "scipy", specifier = ">=1.15.2" },
     { name = "seaborn", specifier = ">=0.13.2" },
+    { name = "silence-tensorflow", specifier = ">=1.2.3" },
     { name = "sympy", specifier = ">=1.14.0" },
     { name = "tensorflow", specifier = ">=2.19.0" },
     { name = "tensorflow-probability", extras = ["tf"], specifier = ">=0.25.0" },
@@ -1926,6 +1939,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/44/80/97e25f0f1e4067677
 wheels = [
     { url = "https://files.pythonhosted.org/packages/23/63/5517029d6696ddf2bd378d46f63f479be001c31b462303170a1da57650cb/setuptools-80.0.0-py3-none-any.whl", hash = "sha256:a38f898dcd6e5380f4da4381a87ec90bd0a7eec23d204a5552e80ee3cab6bd27", size = 1240907 },
 ]
+
+[[package]]
+name = "silence-tensorflow"
+version = "1.2.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a4/3f/7256c42c70c0fae58ebc7ddae9285957607578b545330f2e7cdf861a0bb5/silence_tensorflow-1.2.3.tar.gz", hash = "sha256:4c55a32951af577e68e47e48675199b49944fd0fe042a026c069148bbef1d293", size = 7179 }
 
 [[package]]
 name = "six"
