@@ -35,7 +35,7 @@ except AttributeError: # In case absl is not found or used directly
 
 
 os.environ["JAX_ENABLE_X64"] = "True"
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0: DEBUG, 1: INFO, 2: WARNING, 3: ERROR, 4: FATAL
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '4'  # 0: DEBUG, 1: INFO, 2: WARNING, 3: ERROR, 4: FATAL
 # os.environ['XLA_FLAGS'] = '--tf_xla_logging_level=0'
 
 from IPython.display import  Image,Markdown,Latex, display

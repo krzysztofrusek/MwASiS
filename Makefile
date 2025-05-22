@@ -56,7 +56,7 @@ stud/%.tar: stud/%.ipynb
 %.tar.gz: %.tar
 	gzip $^
 
-cw: stud/Obliczenia_techniczne_Ćwiczenia.tar.gz stud/Modele_probabilistyczne_Ćwiczenia.ipynb stud/Parametryzacja_modeli_Ćwiczenia.ipynb
+cw: stud/Obliczenia_techniczne_Ćwiczenia.tar.gz stud/Modele_probabilistyczne_Ćwiczenia.ipynb stud/Parametryzacja_modeli_Ćwiczenia.ipynb stud/Bayes_cw.ipynb
 
 clean:
 	rm -rf out stud
