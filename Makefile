@@ -29,6 +29,10 @@ out/Zaawansowane_modele_probabilistyczne.md: wykład/Zaawansowane_modele_probabi
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
 	sed -i '' 's/\[svg/\[/g' $@
 
+out/Szeregi_czasowe.md: wykład/Szeregi_czasowe.ipynb
+	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
+	sed -i '' 's/\[svg/\[/g' $@
+
 # out/Bayes.pdf:wykład/Bayes_tex/Bayes.tex
 # 	rsync -a wykład/Bayes_tex/ out/
 # 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' \
