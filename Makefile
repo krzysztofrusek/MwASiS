@@ -33,6 +33,10 @@ out/Szeregi_czasowe.md: wykład/Szeregi_czasowe.ipynb
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
 	sed -i '' 's/\[svg/\[/g' $@
 
+out/Thompson_sampling.md: wykład/Thompson_sampling.ipynb
+	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
+	sed -i '' 's/\[svg/\[/g' $@
+
 # out/Bayes.pdf:wykład/Bayes_tex/Bayes.tex
 # 	rsync -a wykład/Bayes_tex/ out/
 # 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' \

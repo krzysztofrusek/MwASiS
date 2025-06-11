@@ -15,6 +15,7 @@ dependencies = [
     "scipy>=1.15.2",
     "seaborn>=0.13.2",
     "silence-tensorflow>=1.2.3",
+    "statsmodels>=0.14.4",
     "sympy>=1.14.0",
     "tensorflow>=2.19.0",
     "tensorflow-probability[tf]>=0.25.0",
