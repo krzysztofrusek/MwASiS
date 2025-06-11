@@ -29,13 +29,17 @@ out/Zaawansowane_modele_probabilistyczne.md: wykład/Zaawansowane_modele_probabi
 	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
 	sed -i '' 's/\[svg/\[/g' $@
 
+out/Szeregi_czasowe.md: wykład/Szeregi_czasowe.ipynb
+	jupyter nbconvert --config nbconf.py  --output-dir=out  $<
+	sed -i '' 's/\[svg/\[/g' $@
+
 # out/Bayes.pdf:wykład/Bayes_tex/Bayes.tex
 # 	rsync -a wykład/Bayes_tex/ out/
 # 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' \
 # 		-pdf -output-directory="out" $<
 # 		#-aux-directory=out/aux \
 
-wyklady: out/Modele_probabilistyczne.pdf out/Parametryzacja_modeli.pdf out/Obliczenia_Bayesowskie.pdf out/Bayes.pdf out/Zaawansowane_modele_probabilistyczne.pdf
+wyklady: out/Modele_probabilistyczne.pdf out/Parametryzacja_modeli.pdf out/Obliczenia_Bayesowskie.pdf out/Bayes.pdf out/Zaawansowane_modele_probabilistyczne.pdf out/Szeregi_czasowe.pdf
 
 stud:
 	mkdir -p stud
@@ -60,7 +64,7 @@ stud/%.tar: stud/%.ipynb
 %.tar.gz: %.tar
 	gzip $^
 
-cw: stud/Obliczenia_techniczne_Ćwiczenia.tar.gz stud/Modele_probabilistyczne_Ćwiczenia.ipynb stud/Parametryzacja_modeli_Ćwiczenia.ipynb stud/Bayes_cw.ipynb stud/Bayes_II_cw.ipynb
+cw: stud/Obliczenia_techniczne_Ćwiczenia.tar.gz stud/Modele_probabilistyczne_Ćwiczenia.ipynb stud/Parametryzacja_modeli_Ćwiczenia.ipynb stud/Bayes_cw.ipynb stud/Bayes_II_cw.ipynb stud/Zawansowane_modele_cw.ipynb
 
 clean:
 	rm -rf out stud
