@@ -1,8 +1,3 @@
-import jax
-import jax.numpy as jnp
-import numpy as np
-import pandas as pd
-import tensorflow as tf
 import tensorflow_probability as tfp
 tfd = tfp.distributions
 
