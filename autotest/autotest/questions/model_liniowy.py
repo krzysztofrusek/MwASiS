@@ -70,6 +70,6 @@ Wynik podać najwyższej raportowanej precyzji.
         pass
     betaid = int(jax.random.choice(kq, jnp.arange(0, shape[1] + 1)))
 
-    info = info.render(data=df.to_csv(index=False), betaid=betaid,tolerance=0)
+    info = info.render(data=df.to_csv(index=False), betaid=betaid,tolerance=0.1)
 
     return info.replace(answer=coefficients[betaid],)
