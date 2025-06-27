@@ -1,5 +1,7 @@
 CONF=nbconf.py
 
+%.docx: %.md
+	pandoc $< -o $@ --standalone
 
 %.pdf: %.md
 	pandoc $< -o $@ -t beamer --slide-level 2 --resource-path=out
